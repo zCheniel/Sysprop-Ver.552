@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {Link} from 'react-router-dom'
 
 const SideBar = () => {
 	const [isExpanded, setExpendState] = useState(true);
@@ -70,13 +70,13 @@ const SideBar = () => {
 				</div>
 				<div className="nav-menu">
 					{menuItems.map(({ text, icon }) => (
-						<a
+						<Link
 							className={isExpanded ? "menu-item" : "menu-item menu-item-NX"}
-							href="/"
+							to="/"
 						>
 							<i className={icon}/>
 							{isExpanded && <p> {text}</p>}
-						</a>
+						</Link>
 					))}
 				</div>
 			</div>
